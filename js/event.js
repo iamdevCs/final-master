@@ -33,44 +33,44 @@ const song = [
     {
         title: 'Hồng lâu mộng',
         author: 'MC ILL',
-        image: '../img/hlm.jpg',
+        image: './img/hlm.jpg',
         // background: '/img/hlm-background.jpg',
-        song: '../audio/hlm.mp3',
+        song: './audio/hlm.mp3',
     },
     {
         title: 'Đi ngang ngày buồn',
         author: 'Vanh Vanh',
-        image: '../img/dnnb.jpg',
+        image: './img/dnnb.jpg',
         // background: '/img/dnnb-background.jpg',
         song: '..../audio/dnnb.mp3',
     },
     {
         title: 'Sao em lại tắt máy',
         author: 'Phạm Nguyên Ngọc',
-        image: '../img/seltm.jpg',
+        image: './img/seltm.jpg',
         // background: '/img/seltm-background.jpg',
-        song: '../audio/seltm.mp3',
+        song: './audio/seltm.mp3',
     },
     {
         title: 'Cheating on you',
         author: 'Charlie Puth',
-        image: '../img/coy-author.jpg',
+        image: './img/coy-author.jpg',
         // background: '/img/seltm-background.jpg',
-        song: '../audio/coy.mp3',
+        song: './audio/coy.mp3',
     },
     {
         title: 'Attention',
         author: 'Charlie Puth',
-        image: '../img/attention.jpg',
+        image: './img/attention.jpg',
         // background: '/img/seltm-background.jpg',
-        song: '../audio/attention.mp3',
+        song: './audio/attention.mp3',
     },
     {
         title: 'How long',
         author: 'Charlie Puth',
-        image: '../img/hl.jpg',
+        image: './img/hl.jpg',
         // background: '/img/seltm-background.jpg',
-        song: '../audio/hl.mp3',
+        song: './audio/hl.mp3',
     },
 ]
 
@@ -82,7 +82,7 @@ html = song.map(function (element, index) {
                 </div>
                 <h4 id="song-name">${element.title}</h4>
                 <div class="option">
-                    <img id="btn-option" src="../img/option-icon.png" alt="">
+                    <img id="btn-option" src="./img/option-icon.png" alt="">
                 </div>
             </div>`
 })
