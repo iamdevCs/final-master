@@ -3,12 +3,19 @@ const select = document.querySelector.bind(document);
 const selectAll = document.querySelectorAll.bind(document);
 let bodyBlock = select('.body-block');
 let audio = select('audio');
-// let currentSongIndex = 3;
+let currentSongIndex = 3;
 let isPlaying = false;
 let btnPlayPause = select('#btn-play-pause');
 let btnPlay = select('#btn-play-img');
 let btnPause = select('#btn-pause-img');
+let btnPrev = select('#btn-prev-img');
+let btnNext = select('#btn-next-img');
+let btnRepeat = select('#btn-repeat-img');
+let btnRandom = select('#btn-random-img');
 let cdOnPlaying = select('#cd');
+let progressBar = select('.progress');
+let isRepeat = false;
+let isRandom = false;
 
 /** Navbar event
  * =================================================================
@@ -119,6 +126,14 @@ bodyBlock.onscroll = function () {
 /** Player button event
  * =================================================================
  */
+// Make click effect
+function clickEffect (button) {
+    button.style.opacity = `50%`;
+    setTimeout(function () {
+        button.style.opacity = `100%`;
+    }, 1000/4)
+}
+
 // When click play or pause
 btnPlayPause.onclick = function () {
     if (isPlaying == false) {
@@ -132,6 +147,43 @@ btnPlayPause.onclick = function () {
         btnPause.style.display = 'none';
         audio.pause();
     }
+    clickEffect(btnPlayPause);
+}
+
+// When click next button
+btnNext.onclick = function () {
+    if (currentSongIndex + 1 == song.length) {
+        currentSongIndex = 0;
+    } else {
+        currentSongIndex += 1;
+    }
+    render(currentSongIndex);
+    clickEffect(btnNext);
+}
+
+// When click prev button
+btnPrev.onclick = function () {
+    if (currentSongIndex == 0) {
+        currentSongIndex = song.length - 1;
+    } else {
+        currentSongIndex -= 1;
+    }
+    render(currentSongIndex);
+    clickEffect(btnPrev);
+}
+
+// When click repeat button
+btnRepeat.onclick = function () {
+    isRepeat = !isRepeat;
+    btnRepeat.classList.toggle('active', btnRepeat.isRepeat);
+    clickEffect(btnRepeat);
+}
+
+// When click random button
+btnRandom.onclick = function () {
+    isRandom = !isRandom;
+    btnRandom.classList.toggle('active', btnRandom.isRandom);
+    clickEffect(btnRandom);
 }
 
 // When click on a song, set that song on playing
@@ -141,4 +193,23 @@ function render(index) {
     if (isPlaying == true) {
         audio.play();
     }
+    currentSongIndex = index;
+}
+
+// Set progress up to the current time of the song if the song is onplaying
+audio.ontimeupdate = function () {
+    let progressPercent = Math.floor(audio.currentTime / audio.duration * 100);
+    progressBar.value = progressPercent;
+    progressBar.style.backgroundSize = `${progressPercent}% 100%`;
+}
+
+// When user skip to a time
+progressBar.onchange = function(event) {
+    var skipTime = ((event.target.value)/100)*audio.duration;
+    audio.currentTime = skipTime;
+}
+
+// Handle when a song ended
+audio.onended = function () {
+    audio.play();
 }

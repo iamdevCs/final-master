@@ -128,6 +128,11 @@ html {
     height: 40px;
     border-radius: 50px;
   }
+
+  .btn-control .active {
+    border: 1px solid purple;
+    border-radius: 50px;
+  }
 }
 
 /* Table: width < 740px (46.1475em) */
@@ -212,7 +217,7 @@ html {
     margin-left: 5%;
     height: 40px;
     width: 40px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 50px;
     /* background-color: lightblue; */
   }
@@ -246,6 +251,13 @@ html {
     display: block;
     height: 40px;
     border-radius: 50px;
+  }
+
+  .btn-control .active {
+    border: 1px solid red;
+  }
+  .btn-control:hover {
+    opacity: 50%;
   }
 }
 
@@ -335,7 +347,7 @@ html {
     margin-left: 5%;
     height: 40px;
     width: 40px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 50px;
     /* background-color: lightblue; */
   }
@@ -369,6 +381,14 @@ html {
     display: block;
     height: 40px;
     border-radius: 50px;
+  }
+
+  .btn-control .active {
+    border: 1px solid red;
+  }
+
+  .btn-control:hover {
+    opacity: 50%;
   }
 }
 
