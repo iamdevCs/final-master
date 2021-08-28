@@ -1,0 +1,17 @@
+-- INCLUDES OTHERS HTML TO A HTML
+## https://www.technomark.in/Include-Another-HTML-File-In-A-HTML-File.aspx
+
+-- SOURCE CODE USE JQUERY
+<head>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<script>
+    <script type="text/javascript">
+    $(function () {
+        $(".Header").load("/Block/header.html");
+    }),
+    $(function () {
+            $(".Footer").load("/Block/footer.html");
+    })
+</script>
+</script>

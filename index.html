@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music is life</title>
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="stylesheet" href="./css/user-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <!-- HEADER FIXED -->
+    <div class="container">
+        <img src="./img/logo.png" alt="" id="page-logo">
+        <div class="current-section">
+            <div class="section-index" id="isActive"></div>
+            <div class="section-index"></div>
+            <div class="section-index"></div>
+            <div class="section-index"></div>
+        </div>
+        <div class="navbar">
+            <a href="" class="navbar-item" id="home">Home</a>
+            <a href="" class="navbar-item" id="mylist">My List</a>
+            <a href="" class="navbar-item" id="about">About</a>
+            <a href="" class="navbar-item" id="join">Join</a>
+        </div>
+        <input type="text" id="search-bar">
+    </div>
+    <!-- BODY - CHANGE BY SCROLL -->
+    <div class="body-block">
+        <section data-section="0" class="active">
+            
+        </section>
+        <section data-section="1">
+            
+        </section>
+        <section data-section="2">
+            
+        </section>
+        <section data-section="3">
+            
+        </section>
+    </div>
+    <!-- PLAYLIST FIXED -->
+    <div class="playlist">
+        <div id="cd"></div>
+        <div class="btn-control" id="btn-repeat">
+            <img id="btn-repeat-img" src="./img/button/repeat-btn.png" alt="">
+        </div>
+        <div class="btn-control" id="btn-prev">
+            <img id="btn-prev-img" src="./img/button/prev-btn.png" alt="">
+        </div>
+        <div class="btn-control" id="btn-play-pause">
+            <img id="btn-play-img" src="./img/button/play-btn.png" alt="">
+            <img id="btn-pause-img" src="./img/button/pause-btn.png" alt="">
+        </div>
+        <div class="btn-control" id="btn-next">
+            <img id="btn-next-img" src="./img/button/next-btn.png" alt="">
+        </div>
+        <div class="btn-control" id="btn-random">
+            <img id="btn-random-img" src="./img/button/random-btn.png" alt="">
+        </div>
+    </div>
+    <audio src="./audio/coy.mp3"></audio>
+    <script src="./js/event.js">
+        
+    </script>
+</body>
+</html>
