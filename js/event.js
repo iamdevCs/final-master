@@ -42,7 +42,7 @@ const song = [
         author: 'Vanh Vanh',
         image: './img/dnnb.jpg',
         // background: '/img/dnnb-background.jpg',
-        song: '..../audio/dnnb.mp3',
+        song: './audio/dnnb.mp3',
     },
     {
         title: 'Sao em lại tắt máy',
