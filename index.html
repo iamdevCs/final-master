@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/sign.css">
     <link rel="stylesheet" href="./css/user-list.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -24,7 +25,7 @@
         <div class="navbar">
             <a href="" class="navbar-item" id="home">Home</a>
             <a href="" class="navbar-item" id="mylist">My List</a>
-            <a href="" class="navbar-item" id="about">About</a>
+            <a href="https://www.facebook.com/an.hung.338658/" class="navbar-item" id="about">About</a>
             <a href="" class="navbar-item" id="join">Join</a>
         </div>
         <input type="text" id="search-bar">
@@ -66,6 +67,13 @@
         </div>
     </div>
     <audio src="./audio/coy.mp3"></audio>
+    <script>
+        $('.body-block').fadeOut('slow', function () {
+                $('.body-block').load('./block/home.html', function () {
+                $('.body-block').fadeIn('slow');
+            });
+        })
+    </script>
     <script src="./js/event.js">
         
     </script>

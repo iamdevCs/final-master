@@ -2,6 +2,12 @@
 const select = document.querySelector.bind(document);
 const selectAll = document.querySelectorAll.bind(document);
 let bodyBlock = select('.body-block');
+// Navbar handler
+let btnHome = select('#home');
+let btnMyList = select('#mylist');
+let btnAbout = select('#about');
+let btnJoin = select('#join');
+// Audio handler
 let audio = select('audio');
 let currentSongIndex = 3;
 let isPlaying = false;
@@ -16,13 +22,12 @@ let cdOnPlaying = select('#cd');
 let progressBar = select('.progress');
 let isRepeat = false;
 let isRandom = false;
+let randomSongIndex = Math.floor(Math.random() * 10);
 
 /** Navbar event
  * =================================================================
  */
 // When click on join
-// Handle event click
-let btnJoin = select('#join');
 btnJoin.onclick = function (event) {
     event.preventDefault();
     $('.body-block').fadeOut('slow', function () {
@@ -34,9 +39,28 @@ btnJoin.onclick = function (event) {
     })
 }
 
+// When click on home
+btnHome.onclick = function (event) {
+    event.preventDefault();
+    $('.body-block').fadeOut('slow', function () {
+        bodyBlock.style.display = 'block';
+        bodyBlock.innerText = '';
+        $('.body-block').load('./block/home.html', function () {
+            $('.body-block').fadeIn(3000);
+        });
+    })
+}
+
 // When click on My List - load list default music
 // List default music
 const song = [
+    {
+        title: '3107 3',
+        author: 'Nâu',
+        image: './img/31073.jpg',
+        // background: '/img/hlm-background.jpg',
+        song: './audio/31073.mp3',
+    },
     {
         title: 'Hồng lâu mộng',
         author: 'MC ILL',
@@ -95,7 +119,6 @@ html = song.map(function (element, index) {
 })
 
 // Handle event click
-let btnMyList = select('#mylist');
 btnMyList.onclick = function (event) {
     event.preventDefault();
     $('.body-block').fadeOut('slow', function () {
@@ -210,6 +233,25 @@ progressBar.onchange = function(event) {
 }
 
 // Handle when a song ended
+// If repeat, repeat song when ended, else
+// If random, random song when enede, else next song instead of
 audio.onended = function () {
-    audio.play();
+    if (isRepeat) {
+        audio.play();
+    } else {
+        if (isRandom) {
+            while (randomSongIndex == currentSongIndex) {
+                randomSongIndex = Math.floor(Math.random() * song.length);
+            }
+            currentSongIndex = randomSongIndex;
+            render(currentSongIndex);
+        } else {
+            if (currentSongIndex + 1 == song.length) {
+                currentSongIndex = 0;
+            } else {
+                currentSongIndex += 1;
+            }
+            render(currentSongIndex);
+        }
+    }
 }
