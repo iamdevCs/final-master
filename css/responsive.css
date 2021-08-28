@@ -67,7 +67,7 @@ html {
   .body-block {
     display: block;
     margin: 0px 0px 0px;
-    height: 76%;
+    height: 72%;
     width: auto;
     overflow: scroll;
   }
@@ -186,7 +186,7 @@ html {
   .body-block {
     display: block;
     margin: 0px 0px 0px;
-    height: 82%;
+    height: 79%;
     width: auto;
     overflow: scroll;
   }
@@ -309,7 +309,7 @@ html {
   .body-block {
     display: block;
     margin: 0px 0px 0px;
-    height: 82%;
+    height: 79%;
     width: auto;
     overflow: scroll;
   }
@@ -397,4 +397,40 @@ section.active {
 
 .current-section #isActive {
   background-color: yellow;
+}
+
+.progress {
+  width: 100vw;
+  margin: 0px 0px 0px;
+  padding: 0px 0px 0px;
+  background-color: lightblue;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  /* margin-right: 15px; */
+  height: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(yellow, yellow);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: yellow;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
