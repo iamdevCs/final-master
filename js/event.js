@@ -23,6 +23,11 @@ let progressBar = select('.progress');
 let isRepeat = false;
 let isRandom = false;
 let randomSongIndex = Math.floor(Math.random() * 10);
+let btnVolume = select('.volume');
+let volumeBar = select('.volume-bar-hiding');
+let currentVolume = select('.volume-bar');
+// Section index
+let allSectionIndex = selectAll('.section-index');
 
 /** Navbar event
  * =================================================================
@@ -138,13 +143,36 @@ btnMyList.onclick = function (event) {
 /** Scroll section event
  * =================================================================
  */
-// let currSection = select('section');
-// let poi = currSection.getBoundingClientRect();
-// bodyBlock.onscroll = function () {
-//     poi = currSection.getBoundingClientRect();
-//     console.log(poi.top);
-// // console.log(poi.top);
-// }
+// If user click on a section index
+let sectionPoint = selectAll('.section-index');
+sectionPoint[0].onclick = function () {
+    sectionPoint[0].classList.add('isActive');
+    sectionPoint[1].classList.remove('isActive');
+    sectionPoint[2].classList.remove('isActive');
+    sectionPoint[3].classList.remove('isActive');
+}
+
+sectionPoint[1].onclick = function () {
+    sectionPoint[1].classList.add('isActive');
+    sectionPoint[0].classList.remove('isActive');
+    sectionPoint[2].classList.remove('isActive');
+    sectionPoint[3].classList.remove('isActive');
+}
+
+sectionPoint[2].onclick = function () {
+    sectionPoint[2].classList.add('isActive');
+    sectionPoint[1].classList.remove('isActive');
+    sectionPoint[0].classList.remove('isActive');
+    sectionPoint[3].classList.remove('isActive');
+}
+
+sectionPoint[3].onclick = function () {
+    sectionPoint[3].classList.add('isActive');
+    sectionPoint[1].classList.remove('isActive');
+    sectionPoint[2].classList.remove('isActive');
+    sectionPoint[0].classList.remove('isActive');
+}
+
 
 /** Player button event
  * =================================================================
@@ -271,4 +299,19 @@ function cdRotate () {
     } else {
         cdThumbAnimate.pause();
     }
+}
+
+// Volume adjust appear
+btnVolume.onclick = function () {
+    volumeBar.style.display = 'block';
+    btnVolume.style.display = 'none'
+    setTimeout(() => {
+        volumeBar.style.display = 'none';
+        btnVolume.style.display = 'block';
+    }, 5000)
+}
+
+// When user adjust volume
+currentVolume.onchange = function () {
+    audio.volume = currentVolume.value/100;
 }

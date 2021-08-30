@@ -451,7 +451,7 @@ section.active {
   display: block;
 }
 
-.current-section #isActive {
+.current-section .isActive {
   background-color: yellow;
 }
 
@@ -489,4 +489,39 @@ input[type="range"]::-webkit-slider-runnable-track {
   box-shadow: none;
   border: none;
   background: transparent;
+}
+
+.volume-bar-hiding {
+  display: none;
+  position: unset;
+  width: 100%;
+  height: 7%;
+  background-color: skyblue;
+  animation-name: volumeAppear;
+  animation-duration: 5s;
+  text-align: center;
+}
+
+@keyframes volumeAppear {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 8%;
+  }
+  50% {
+    height: 8%;
+  }
+  85% {
+    height: 8%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+.volume-bar {
+  width: 70%;
+  margin-top: 8%;
+  height: 10px;
 }

@@ -13,14 +13,18 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+    <!-- VOLUME BAR -->
+    <div class="volume-bar-hiding">
+        <input id="volume-bar" class="volume-bar" type="range" value="100" step="0.1" min="0" max="100">
+    </div>
     <!-- HEADER FIXED -->
     <div class="container">
         <img src="./img/logo.png" alt="" id="page-logo">
         <div class="current-section">
-            <div class="section-index" id="isActive"></div>
-            <div class="section-index"></div>
-            <div class="section-index"></div>
-            <div class="section-index"></div>
+            <div class="section-index" value="1"></div>
+            <div class="section-index" value="2"></div>
+            <div class="section-index" value="3"></div>
+            <div class="section-index" value="4"></div>
         </div>
         <div class="volume"></div>
         <div class="navbar">
