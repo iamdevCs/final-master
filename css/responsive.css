@@ -454,3 +454,15 @@ input[type="range"]::-webkit-slider-runnable-track {
   border: none;
   background: transparent;
 }
+
+.volume {
+  background-image: url("../img/volume-icon.png");
+  background-size: cover;
+  float: right;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  /* background-color: blanchedalmond; */
+  right: 2%;
+  top: 3%;
+}

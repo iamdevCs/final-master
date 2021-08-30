@@ -171,6 +171,7 @@ btnPlayPause.onclick = function () {
         audio.pause();
     }
     clickEffect(btnPlayPause);
+    cdRotate();
 }
 
 // When click next button
@@ -253,5 +254,21 @@ audio.onended = function () {
             }
             render(currentSongIndex);
         }
+    }
+}
+
+// Cd rotation
+const cdThumbAnimate = cdOnPlaying.animate([
+                { transform: 'rotate(360deg)'}
+            ], {
+                duration: 10000, //10 secs
+                iterations: Infinity,
+            })
+cdThumbAnimate.pause();
+function cdRotate () {
+    if (isPlaying) {
+        cdThumbAnimate.play();
+    } else {
+        cdThumbAnimate.pause();
     }
 }

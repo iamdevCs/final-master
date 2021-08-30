@@ -4,10 +4,160 @@ section {
 
 /* Moblie: width < 740px (46.1475em) */
 @media screen and (max-width: 46.1875em) {
+  .flex-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 100%;
+    /* background-color: purple; */
+  }
+
+  .flex-item-odd {
+    position: relative;
+    width: 100%;
+    /* min-width: 308px;
+    min-height: 580px; */
+    height: 25%;
+    /* margin: 1%; */
+    /* background-color: white; */
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+
+  .flex-item-even {
+    position: relative;
+    width: 100%;
+    /* min-width: 308px;
+    min-height: 580px; */
+    height: 24%;
+    /* margin: 1%; */
+    /* background-color: white; */
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+
+  .flex-item-information-left {
+    position: absolute;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    /* background-color: teal; */
+    border-radius: 15px;
+  }
+
+  .flex-item-information-right {
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    /* background-color: teal; */
+    border-radius: 15px;
+  }
+
+  .flex-item-description {
+    display: none;
+  }
+
+  .flex-item-header-left {
+    position: absolute;
+    left: 0;
+    width: 55%;
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+
+  .flex-item-header-right {
+    position: absolute;
+    right: 0;
+    width: 55%;
+    padding-top: auto;
+    padding-bottom: auto;
+  }
 }
 
 /* Table: width < 740px (46.1475em) */
 @media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .flex-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 100%;
+    /* background-color: purple; */
+  }
+
+  .flex-item-odd {
+    position: relative;
+    width: 25%;
+    min-width: 308px;
+    min-height: 580px;
+    height: 100%;
+    /* margin: 1%; */
+    /* background-color: white; */
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+
+  .flex-item-even {
+    position: relative;
+    width: 25%;
+    min-width: 308px;
+    min-height: 580px;
+    height: 100%;
+    /* margin: 1%; */
+    /* background-color: white; */
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+
+  .flex-item-information-bot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    /* background-color: teal; */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .flex-item-information-top {
+    width: 100%;
+    height: 60%;
+    /* background-color: teal; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .flex-item-description {
+    overflow: scroll;
+    font-family: cursive;
+    font-size: 20px;
+    /* background-color: silver; */
+    width: 100%;
+    height: 25%;
+  }
+
+  .PNN {
+    color: skyblue;
+    display: block;
+    text-decoration: none;
+  }
+
+  .CP {
+    color: skyblue;
+    display: block;
+    text-decoration: none;
+  }
+
+  p {
+    word-break: break-all;
+  }
+
+  .trending {
+    font-size: 25px;
+    color: slategray;
+  }
 }
 
 /* PC: width < 740px (46.1475em) */
