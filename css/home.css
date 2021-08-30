@@ -4,6 +4,7 @@ section {
 
 /* Moblie: width < 740px (46.1475em) */
 @media screen and (max-width: 46.1875em) {
+  /* SECTION 1 */ /* SECTION 1 */ /* SECTION 1 */ /* SECTION 1 */
   .flex-container {
     display: block;
     margin-left: auto;
@@ -74,12 +75,65 @@ section {
     padding-top: auto;
     padding-bottom: auto;
   }
+
+  /* SECTION 2 */ /* SECTION 2 */ /* SECTION 2 */ /* SECTION 2 */
+  .author-info {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    /* background-color: white; */
+  }
+
+  #author-head {
+    display: block;
+    /* background-color: teal; */
+    width: 100%;
+    height: 60%;
+  }
+
+  #author-info {
+    overflow: scroll;
+    display: block;
+    width: 100%;
+    height: 22%;
+    /* background-color: tomato; */
+    text-align: left;
+    padding-left: 2%;
+    color: silver;
+  }
+
+  #author-name {
+    /* position: fixed; */
+    font-family: cursive;
+    color: yellow;
+    /* height: 20%; */
+    width: 100%;
+  }
+
+  #author-image {
+    background-image: url("../img/seltm-author.jpg");
+    background-size: cover;
+    height: 99%;
+    width: 99%;
+    background-color: thistle;
+    margin: auto auto;
+    border-radius: 15px;
+  }
+
+  #a-song a {
+    text-decoration: none;
+    color: skyblue;
+  }
+
+  /* SECTION 3 */ /* SECTION 3 */ /* SECTION 3 */ /* SECTION 3 */
 }
 
 /* Table: width < 740px (46.1475em) */
 @media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  /* SECTION 1 */ /* SECTION 1 */ /* SECTION 1 */ /* SECTION 1 */
   .flex-container {
-    display: flex;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100vw;
@@ -89,10 +143,10 @@ section {
 
   .flex-item-odd {
     position: relative;
-    width: 25%;
-    min-width: 308px;
-    min-height: 580px;
-    height: 100%;
+    width: 100%;
+    /* min-width: 308px;
+    min-height: 580px; */
+    height: 25%;
     /* margin: 1%; */
     /* background-color: white; */
     border: 1px solid white;
@@ -101,67 +155,110 @@ section {
 
   .flex-item-even {
     position: relative;
-    width: 25%;
-    min-width: 308px;
-    min-height: 580px;
-    height: 100%;
+    width: 100%;
+    /* min-width: 308px;
+    min-height: 580px; */
+    height: 24%;
     /* margin: 1%; */
     /* background-color: white; */
     border: 1px solid white;
     border-radius: 15px;
   }
 
-  .flex-item-information-bot {
+  .flex-item-information-left {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 60%;
+    width: 45%;
+    height: 100%;
     /* background-color: teal; */
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
   }
 
-  .flex-item-information-top {
-    width: 100%;
-    height: 60%;
+  .flex-item-information-right {
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 100%;
     /* background-color: teal; */
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px;
   }
 
   .flex-item-description {
-    overflow: scroll;
-    font-family: cursive;
-    font-size: 20px;
-    /* background-color: silver; */
+    display: none;
+  }
+
+  .flex-item-header-left {
+    position: absolute;
+    left: 0;
+    width: 55%;
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+
+  .flex-item-header-right {
+    position: absolute;
+    right: 0;
+    width: 55%;
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+
+  /* SECTION 2 */ /* SECTION 2 */ /* SECTION 2 */ /* SECTION 2 */
+  .author-info {
+    display: block;
     width: 100%;
-    height: 25%;
+    height: 100%;
+    overflow: scroll;
+    /* background-color: white; */
   }
 
-  .PNN {
-    color: skyblue;
+  #author-head {
     display: block;
-    text-decoration: none;
+    /* background-color: teal; */
+    width: 100%;
+    height: 60%;
   }
 
-  .CP {
-    color: skyblue;
+  #author-info {
+    overflow: scroll;
     display: block;
+    width: 100%;
+    height: 22%;
+    /* background-color: tomato; */
+    text-align: left;
+    padding-left: 2%;
+    color: silver;
+  }
+
+  #author-name {
+    /* position: fixed; */
+    font-family: cursive;
+    color: yellow;
+    /* height: 20%; */
+    width: 100%;
+  }
+
+  #author-image {
+    background-image: url("../img/seltm-author.jpg");
+    background-size: cover;
+    height: 99%;
+    width: 80%;
+    background-color: thistle;
+    margin: auto auto;
+    border-radius: 15px;
+  }
+
+  #a-song a {
     text-decoration: none;
+    color: skyblue;
   }
 
-  p {
-    word-break: break-all;
-  }
-
-  .trending {
-    font-size: 25px;
-    color: slategray;
-  }
+  /* SECTION 3 */ /* SECTION 3 */ /* SECTION 3 */ /* SECTION 3 */
 }
 
 /* PC: width < 740px (46.1475em) */
 @media screen and (min-width: 64em) {
+  /* SECTION 1 */ /* SECTION 1 */ /* SECTION 1 */ /* SECTION 1 */
   .flex-container {
     display: flex;
     margin-left: auto;
@@ -242,6 +339,63 @@ section {
     font-size: 25px;
     color: slategray;
   }
+
+  /* SECTION 2 */ /* SECTION 2 */ /* SECTION 2 */ /* SECTION 2 */
+  .author-info {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    /* background-color: white; */
+  }
+
+  #author-head {
+    position: absolute;
+    display: block;
+    /* background-color: teal; */
+    width: 40%;
+    height: 100%;
+  }
+
+  #author-info {
+    position: absolute;
+    right: 0;
+    overflow: scroll;
+    width: 59%;
+    height: 39%;
+    /* background-color: tomato; */
+    text-align: left;
+    padding-left: 2%;
+    color: silver;
+  }
+
+  #author-name {
+    /* position: fixed; */
+    font-family: cursive;
+    color: yellow;
+    /* height: 20%; */
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  #author-image {
+    background-image: url("../img/seltm-author.jpg");
+    background-size: cover;
+    height: 99%;
+    width: 99%;
+    background-color: thistle;
+    margin: auto auto;
+    border-radius: 15px;
+  }
+
+  #a-song a {
+    text-decoration: none;
+    color: skyblue;
+  }
+
+  /* SECTION 3 */ /* SECTION 3 */ /* SECTION 3 */ /* SECTION 3 */
 }
 
 .tab1 {

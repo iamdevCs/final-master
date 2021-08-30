@@ -138,13 +138,13 @@ btnMyList.onclick = function (event) {
 /** Scroll section event
  * =================================================================
  */
-let currSection = select('section');
-let poi = currSection.getBoundingClientRect();
-bodyBlock.onscroll = function () {
-    poi = currSection.getBoundingClientRect();
-    console.log(poi.top);
-// console.log(poi.top);
-}
+// let currSection = select('section');
+// let poi = currSection.getBoundingClientRect();
+// bodyBlock.onscroll = function () {
+//     poi = currSection.getBoundingClientRect();
+//     console.log(poi.top);
+// // console.log(poi.top);
+// }
 
 /** Player button event
  * =================================================================

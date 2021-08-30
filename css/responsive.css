@@ -133,6 +133,18 @@ html {
     border: 1px solid purple;
     border-radius: 50px;
   }
+
+  .volume {
+    background-image: url("../img/volume-icon.png");
+    background-size: cover;
+    float: right;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    /* background-color: blanchedalmond; */
+    right: 2%;
+    top: 3%;
+  }
 }
 
 /* Table: width < 740px (46.1475em) */
@@ -258,6 +270,18 @@ html {
   }
   .btn-control:hover {
     opacity: 50%;
+  }
+
+  .volume {
+    background-image: url("../img/volume-icon.png");
+    background-size: cover;
+    float: right;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    /* background-color: blanchedalmond; */
+    right: 5%;
+    top: 3%;
   }
 }
 
@@ -390,6 +414,18 @@ html {
   .btn-control:hover {
     opacity: 50%;
   }
+
+  .volume {
+    background-image: url("../img/volume-icon.png");
+    background-size: cover;
+    float: right;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    /* background-color: blanchedalmond; */
+    right: 2%;
+    top: 3%;
+  }
 }
 
 .playlist {
@@ -453,16 +489,4 @@ input[type="range"]::-webkit-slider-runnable-track {
   box-shadow: none;
   border: none;
   background: transparent;
-}
-
-.volume {
-  background-image: url("../img/volume-icon.png");
-  background-size: cover;
-  float: right;
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  /* background-color: blanchedalmond; */
-  right: 2%;
-  top: 3%;
 }
