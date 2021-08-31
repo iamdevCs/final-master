@@ -18,24 +18,24 @@
                 <div class="flex-item-information-bot flex-item-information-left tab1"></div>
             </div>
             <div class="flex-item-even">
-                <div class="flex-item-information-top flex-item-information-right tab2"></div>
+                <div class="flex-item-information-top flex-item-information-right tab2" onclick="cpList()"></div>
                 <h1 class="flex-item-header flex-item-header-left">Charlie Puth</h1>
                 <div class="flex-item-description">
-                    <a class="CP" href="">We don't talk anymore</a>
-                    <a class="CP" href="">Cheating on you</a>
-                    <a class="CP" href="">Dangerously</a>
-                    <a class="CP" href="">River</a>
-                    <a class="CP" href="">Sick</a>
+                    <a class="CP" id="song1" href="">We don't talk anymore</a>
+                    <a class="CP" id="song2" href="">Cheating on you</a>
+                    <a class="CP" id="song3" href="">Dangerously</a>
+                    <a class="CP" id="song4" href="">River</a>
+                    <a class="CP" id="song5" href="">Sick</a>
                 </div>
             </div>
             <div class="flex-item-odd">
                 <h1 class="flex-item-header flex-item-header-right">Phạm Nguyên Ngọc</h1>
                 <div class="flex-item-description">
-                    <a class="PNN" href="">Chẳng thể với lấy</a>
-                    <a class="PNN" href="">Đi ngang ngày buồn</a>
-                    <a class="PNN" href="">Em ơi sau này ~ ~</a>
-                    <a class="PNN" href="">Tặng em một chút buồn</a>
-                    <a class="PNN" href="">Cà phê, thuốc lá, em và những ngày yêu</a>
+                    <a class="PNN" id="song1" href="">Chẳng thể với lấy</a>
+                    <a class="PNN" id="song2" href="">Đi ngang ngày buồn</a>
+                    <a class="PNN" id="song3" href="">Em ơi sau này ~ ~</a>
+                    <a class="PNN" id="song4" href="">Tặng em một chút buồn</a>
+                    <a class="PNN" id="song5" href="">Cà phê, thuốc lá, em và những ngày yêu</a>
                 </div>
                 <div class="flex-item-information-bot flex-item-information-left tab3"></div>
             </div>
@@ -65,8 +65,8 @@
                     DOB: 2003
                 </h3>
                 <h3 class="author-info-spec" id="a-song">
-                    Songs: <a href="">Đi ngang ngày buồn</a>,
-                    <a href="">Sao em lại tắt máy</a>
+                    Songs: <a class="author-song" href="">Đi ngang ngày buồn</a>,
+                    <a class="author-song" href="">Sao em lại tắt máy</a>
                 </h3>
                 <h2 class="author-info-spec" id="achievement">
                     Achievement: ... Updateting
@@ -80,5 +80,13 @@
     <section data-section="3">
     
     </section>
+    <script>
+        $.ajaxPrefilter(function (options, original_Options, jqXHR) {
+                options.async = true;
+            });
+            $.holdReady(true);                              //set hold
+            function releaseHold() { $.holdReady(false); }  //callback to release hold
+            $.getScript('./js/event-home.js', releaseHold);          //load script then release hold
+    </script>
 </body>
 </html>

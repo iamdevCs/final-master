@@ -60,6 +60,13 @@ btnHome.onclick = function (event) {
 // List default music
 const song = [
     {
+        title: 'Xa - Chờ đến mùa gió',
+        author: 'Phạm Nguyên Ngọc',
+        image: './img/cdmg-xa.jpg',
+        // background: '/img/hlm-background.jpg',
+        song: './audio/Cdmg-xa.mp3',
+    },
+    {
         title: '3107 3',
         author: 'Nâu',
         image: './img/31073.jpg',
