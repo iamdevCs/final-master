@@ -81,5 +81,17 @@
     </script>
     <script src="./js/event.js"></script>
     <script src="./js/event-home.js"></script>
+    <script src="./js/validator.js"></script>
+    <script>
+        Validate({
+            rules: [
+                Validate.isRequired('#username'),
+                Validate.isRequired('#password'),
+                Validate.isRequired('#re-password'),
+                Validate.isRequired('#phone'),
+                Validate.isEmail('#email'),
+            ]
+        });
+    </script>
 </body>
 </html>

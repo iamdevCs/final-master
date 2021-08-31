@@ -1,6 +1,6 @@
 let cpSong = selectAll('.CP');
 let pnnSong = selectAll('.PNN');
-let trending = select('.trending');
+// let trending = select('.trending');
 let authorSong = selectAll('.author-song');
 
 // CP song prevent default
@@ -24,6 +24,6 @@ for (i = 0; i < authorSong.length; ++i) {
     }
 }
 
-trending.onclick = function (event) {
-    event.preventDefault();
-}
+// trending.onclick = function (event) {
+//     event.preventDefault();
+// }
