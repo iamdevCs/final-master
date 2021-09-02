@@ -32,7 +32,7 @@ btnSignUp.onclick = function (event) {
         bodyBlock.innerText = '';
         bodyBlock.style.display = 'block';
         $('.body-block').load('./block/sign-up.html', function () {
-            $('.body-block').fadeIn('slow');
+            $('.body-block').fadeIn(1000);
         });
     })
     setTimeout(() => {

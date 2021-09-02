@@ -45,15 +45,15 @@ let scriptValidate = `<script>
 btnJoin.onclick = function (event) {
     event.preventDefault();
     $('.body-block').fadeOut('slow', function () {
-        bodyBlock.style.display = 'block';
         bodyBlock.innerText = '';
+        bodyBlock.style.display = 'block';
         $('.body-block').load('./block/sign-in.html', function () {
-            $('.body-block').fadeIn(3000);
+            $('.body-block').fadeIn(1000);
         });
     })
     setTimeout(() => {
         $('body.main').append(scriptValidate);
-        scriptValidate = ``;
+        // scriptValidate = ``;
     }, 1000);
 }
 
