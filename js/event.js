@@ -28,6 +28,15 @@ let volumeBar = select('.volume-bar-hiding');
 let currentVolume = select('.volume-bar');
 // Section index
 let allSectionIndex = selectAll('.section-index');
+// script validate
+let scriptValidate = `<script>
+        Validate({
+            rules: [
+                Validate.isRequired('#username'),
+                Validate.isRequired('#password'),
+            ]
+        });
+    </script>`;
 
 /** Navbar event
  * =================================================================
@@ -43,16 +52,8 @@ btnJoin.onclick = function (event) {
         });
     })
     setTimeout(() => {
-        $('body.main').append(`
-    <script>
-        Validate({
-            rules: [
-                Validate.isRequired('#username'),
-                Validate.isRequired('#password'),
-            ]
-        });
-    </script>
-    `);
+        $('body.main').append(scriptValidate);
+        scriptValidate = ``;
     }, 1000);
 }
 
