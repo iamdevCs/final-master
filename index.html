@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </head>
-<body>
+<body class="main">
     <!-- VOLUME BAR -->
     <div class="volume-bar-hiding">
         <input id="volume-bar" class="volume-bar" type="range" value="100" step="0.1" min="0" max="100">
@@ -30,7 +30,7 @@
         <div class="navbar">
             <a href="" class="navbar-item" id="home">Home</a>
             <a href="" class="navbar-item" id="mylist">My List</a>
-            <a href="https://www.facebook.com/an.hung.338658/" class="navbar-item" id="about">About</a>
+            <a href="https://www.facebook.com/an.hung.338658/" target="_blank" class="navbar-item" id="about">About</a>
             <a href="" class="navbar-item" id="join">Join</a>
         </div>
         <input type="text" id="search-bar">
@@ -74,7 +74,7 @@
     <audio src="./audio/coy.mp3"></audio>
     <script>
         $('.body-block').fadeOut('slow', function () {
-                $('.body-block').load('./block/home.html', function () {
+            $('.body-block').load('./block/home.html', function () {
                 $('.body-block').fadeIn('slow');
             });
         })
@@ -82,16 +82,5 @@
     <script src="./js/event.js"></script>
     <script src="./js/event-home.js"></script>
     <script src="./js/validator.js"></script>
-    <script>
-        Validate({
-            rules: [
-                Validate.isRequired('#username'),
-                Validate.isRequired('#password'),
-                Validate.isRequired('#re-password'),
-                Validate.isRequired('#phone'),
-                Validate.isEmail('#email'),
-            ]
-        });
-    </script>
 </body>
 </html>

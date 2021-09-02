@@ -19,4 +19,20 @@ btnSignUp.onclick = function (event) {
             $('.body-block').fadeIn('slow');
         });
     })
+    setTimeout(() => {
+        $('body.main').append(`
+    <script>
+        Validate({
+            rules: [
+                Validate.isRequired('#username'),
+                Validate.isRequired('#password'),
+                Validate.isRequired('#re-password'),
+                Validate.isRequired('#phone'),
+                Validate.isRequired('#email'),
+                Validate.isEmail('#email'),
+            ]
+        });
+    </script>
+    `);
+    }, 1000);
 }

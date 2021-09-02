@@ -42,6 +42,18 @@ btnJoin.onclick = function (event) {
             $('.body-block').fadeIn(3000);
         });
     })
+    setTimeout(() => {
+        $('body.main').append(`
+    <script>
+        Validate({
+            rules: [
+                Validate.isRequired('#username'),
+                Validate.isRequired('#password'),
+            ]
+        });
+    </script>
+    `);
+    }, 1000);
 }
 
 // When click on home
