@@ -73,6 +73,13 @@ btnHome.onclick = function (event) {
 // List default music
 const song = [
     {
+        title: 'Túy âm',
+        author: 'Xesi',
+        image: './img/tuyam.jpg',
+        // background: '/img/hlm-background.jpg',
+        song: './audio/tuyam.mp3',
+    },
+    {
         title: 'Xa - Chờ đến mùa gió',
         author: 'Phạm Nguyên Ngọc',
         image: './img/cdmg-xa.jpg',
