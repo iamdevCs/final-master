@@ -77,6 +77,20 @@
     font-size: 17px;
     color: lightblue;
   }
+
+  .fav-icon-del {
+    display: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  .fav-icon-del:hover {
+    cursor: pointer;
+  }
+
+  #btn-fav-add {
+    font-size: 20px;
+  }
 }
 
 /* Table: width < 740px (46.1475em) */
@@ -150,6 +164,20 @@
     font-size: 25px;
     color: lightblue;
   }
+
+  .fav-icon-del {
+    display: none;
+    width: 50px;
+    height: 50px;
+  }
+
+  .fav-icon-del:hover {
+    cursor: pointer;
+  }
+
+  #btn-fav-add {
+    font-size: 27px;
+  }
 }
 
 /* PC: width < 740px (46.1475em) */
@@ -222,6 +250,20 @@
     font-size: 30px;
     color: lightblue;
   }
+
+  .fav-icon-del {
+    display: none;
+    width: 60px;
+    height: 60px;
+  }
+
+  .fav-icon-del:hover {
+    cursor: pointer;
+  }
+
+  #btn-fav-add {
+    font-size: 30px;
+  }
 }
 
 .fav-list-name {
@@ -247,4 +289,17 @@
 #fav-list-name:hover {
   cursor: pointer;
   color: lightgreen;
+}
+
+#btn-fav-add {
+  color: lightblue;
+}
+
+#btn-fav-add:hover {
+  cursor: pointer;
+  color: lightgreen;
+}
+
+.add-element {
+  display: none;
 }

@@ -1,4 +1,8 @@
 let listName = select('#fav-list-name');
+let btnManage = select('#btn-manage-list');
+let iconFavDel = selectAll('.fav-icon-del');
+let addElement = select('.add-element');
+
 // When click on a list
 listName.onclick = function (event) {
     event.preventDefault();
@@ -14,4 +18,27 @@ listName.onclick = function (event) {
         let listSong = select('.list-song');
         listSong.innerHTML = html.join('');
     }, 1000);
+}
+
+btnManage.onclick = function () {
+    // display delete button
+    for (let i = 0; i < iconFavDel.length; i++) {
+        iconFavDel[i].style.display = 'block';
+    }
+    // Change button function
+    setTimeout(() => {
+        btnManage.value = 'Save';
+    }, 1000/1000);
+    addElement.style.display = 'block';
+    // Reload favourite list after saved
+    if (btnManage.value == 'Save') {
+        $('.body-block').fadeOut('slow', function () {
+            bodyBlock.style.display = 'block';
+            bodyBlock.innerText = '';
+            $('.body-block').load('./block/favourite-list.html', function () {
+                $('.body-block').fadeIn(3000);
+            });
+        })
+    } else {
+    }
 }
