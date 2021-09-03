@@ -156,15 +156,15 @@ btnMyList.onclick = function (event) {
     $('.body-block').fadeOut('slow', function () {
         bodyBlock.style.display = 'block';
         bodyBlock.innerText = '';
-        $('.body-block').load('./block/user-list.html', function () {
+        $('.body-block').load('./block/favourite-list.html', function () {
             $('.body-block').fadeIn(3000);
         });
     })
     // Load list song
-    setTimeout(() => {
-        let listSong = select('.list-song');
-        listSong.innerHTML = html.join('');
-    }, 1000);
+    // setTimeout(() => {
+    //     let listSong = select('.list-song');
+    //     listSong.innerHTML = html.join('');
+    // }, 1000);
 }
 
 /** Scroll section event
