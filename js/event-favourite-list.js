@@ -20,6 +20,7 @@ listName.onclick = function (event) {
     }, 1000);
 }
 
+// When click on button manage
 btnManage.onclick = function () {
     // display delete button
     for (let i = 0; i < iconFavDel.length; i++) {

@@ -42,8 +42,8 @@ btnSignUp.onclick = function (event) {
 }
 
 // Handle event when click login
-let btnLogIn = select('#btn-login');
-btnLogIn.onclick = function () {
-    btnJoin.classList.add('on-login');
-    console.log(btnJoin)
-}
+// let btnLogIn = select('#btn-login');
+// btnLogIn.onclick = function () {
+//     btnJoin.classList.add('on-login');
+//     console.log(btnJoin)
+// }

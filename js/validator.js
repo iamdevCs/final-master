@@ -12,13 +12,16 @@ Validate.isRequired = function (target) {
     field.onblur = function () {
         if (field.value == '') {
             field.style.border = '1px solid red';
+            field.classList.add('invalid');
         } else {
             field.style.border = 'none';
+            field.classList.remove('invalid');
         }
     }
     // Remove warning if user input
     field.oninput = function () {
         field.style.border = 'none';
+        field.classList.remove('invalid');
     }
 }
 
@@ -30,6 +33,7 @@ Validate.isEmail = function (target) {
         let emailInputValue = emailField.value;
         if(re.test(emailInputValue) == false) {
             emailField.style.border = '1px solid red';
+            emailField.classList.add('invalid');
         }
     }
 }

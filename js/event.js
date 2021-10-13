@@ -170,36 +170,30 @@ btnMyList.onclick = function (event) {
 /** Scroll section event
  * =================================================================
  */
-// If user click on a section index
+// If user click on a section index, get that section
 let sectionPoint = selectAll('.section-index');
-sectionPoint[0].onclick = function () {
-    sectionPoint[0].classList.add('isActive');
-    sectionPoint[1].classList.remove('isActive');
-    sectionPoint[2].classList.remove('isActive');
-    sectionPoint[3].classList.remove('isActive');
+function getSection(index) {
+    sectionPoint[index].classList.add('isActive');
+    for(let i = 0; i < 4; i++) {
+        if (i == index) {
+            continue;
+        }
+        sectionPoint[i].classList.remove('isActive');
+    }
+    scrollSelectedSection(index);
 }
 
-sectionPoint[1].onclick = function () {
-    sectionPoint[1].classList.add('isActive');
-    sectionPoint[0].classList.remove('isActive');
-    sectionPoint[2].classList.remove('isActive');
-    sectionPoint[3].classList.remove('isActive');
+// Scroll selected section into view
+function scrollSelectedSection(index) {
+    const section = select(`[data-section="${index}"]`);
+    section.scrollIntoView(
+            {
+                behavior: "smooth", 
+                block: "end", 
+                inline: "nearest"
+            }
+        );
 }
-
-sectionPoint[2].onclick = function () {
-    sectionPoint[2].classList.add('isActive');
-    sectionPoint[1].classList.remove('isActive');
-    sectionPoint[0].classList.remove('isActive');
-    sectionPoint[3].classList.remove('isActive');
-}
-
-sectionPoint[3].onclick = function () {
-    sectionPoint[3].classList.add('isActive');
-    sectionPoint[1].classList.remove('isActive');
-    sectionPoint[2].classList.remove('isActive');
-    sectionPoint[0].classList.remove('isActive');
-}
-
 
 /** Player button event
  * =================================================================
