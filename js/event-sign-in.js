@@ -40,3 +40,10 @@ btnSignUp.onclick = function (event) {
         scriptValidateSignUp = ``;
     }, 1000);
 }
+
+// Handle event when click login
+let btnLogIn = select('#btn-login');
+btnLogIn.onclick = function () {
+    btnJoin.classList.add('on-login');
+    console.log(btnJoin)
+}
