@@ -64,6 +64,10 @@ html {
     display: none;
   }
 
+  #btn-search {
+    display: none;
+  }
+
   .body-block {
     display: block;
     margin: 0px 0px 0px;
@@ -235,6 +239,11 @@ html {
   #search-bar {
     display: none;
   }
+
+  #btn-search {
+    display: none;
+  }
+
   .body-block {
     display: block;
     margin: 0px 0px 0px;
@@ -408,8 +417,22 @@ html {
   #search-bar {
     margin-top: 10px;
     margin-left: 50px;
+    margin-right: 10px;
     height: 40%;
     width: 20%;
+  }
+
+  #btn-search {
+    margin-top: 7px;
+    border-radius: 5px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+  }
+
+  #btn-search:hover {
+    cursor: pointer;
+    opacity: 95%;
   }
 
   .body-block {

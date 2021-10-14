@@ -135,6 +135,59 @@
   .sign-in-information {
     font-size: 15px;
   }
+
+  #cheap {
+    display: none;
+  }
+  .rmb-cb {
+    width: 140px;
+    /* position: relative; */
+    clear: both;
+    /* margin: 0 0 20px; */
+    margin: auto auto;
+    /* float: left; */
+  }
+  #rmb-span {
+    text-transform: uppercase;
+    font-family: cursive, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 10px;
+    float: right;
+    width: 85px;
+    margin: 6px 0 0;
+  }
+  #rmb-lb {
+    width: 55px;
+    height: 27px;
+    box-sizing: border-box;
+    border: 3px solid;
+    float: left;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  #cheap[type="checkbox"]:checked + #rmb-lb {
+    background: #55e868;
+  }
+  #cheap[type="checkbox"]:checked + #rmb-lb:before {
+    left: 30px;
+  }
+  #rmb-lb:before {
+    transition: 0.3s ease;
+    content: "";
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    background: white;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+    border: 3px solid;
+    color: black;
+    border-radius: 100px;
+  }
 }
 
 /* Tablet */
@@ -237,6 +290,59 @@
     margin: 0;
     opacity: 1;
     transition: 0s;
+  }
+
+  #cheap {
+    display: none;
+  }
+  .rmb-cb {
+    width: 170px;
+    /* position: relative; */
+    clear: both;
+    /* margin: 0 0 20px; */
+    margin: auto auto;
+    /* float: left; */
+  }
+  #rmb-span {
+    text-transform: uppercase;
+    font-family: cursive, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    float: right;
+    width: 85px;
+    margin: 5px 0 0;
+  }
+  #rmb-lb {
+    width: 65px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 3px solid;
+    float: left;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  #cheap[type="checkbox"]:checked + #rmb-lb {
+    background: #55e868;
+  }
+  #cheap[type="checkbox"]:checked + #rmb-lb:before {
+    left: 30px;
+  }
+  #rmb-lb:before {
+    transition: 0.3s ease;
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: white;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+    border: 3px solid;
+    color: black;
+    border-radius: 100px;
   }
 }
 
@@ -341,4 +447,59 @@
     opacity: 1;
     transition: 0s;
   }
+
+  #cheap {
+    display: none;
+  }
+  .rmb-cb {
+    width: 170px;
+    /* position: relative; */
+    clear: both;
+    /* margin: 0 0 20px; */
+    margin: auto auto;
+    /* float: left; */
+  }
+  #rmb-span {
+    text-transform: uppercase;
+    font-family: cursive, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    float: right;
+    width: 85px;
+    margin: 5px 0 0;
+  }
+  #rmb-lb {
+    width: 65px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 3px solid;
+    float: left;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  #cheap[type="checkbox"]:checked + #rmb-lb {
+    background: #55e868;
+  }
+  #cheap[type="checkbox"]:checked + #rmb-lb:before {
+    left: 30px;
+  }
+  #rmb-lb:before {
+    transition: 0.3s ease;
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: white;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+    border: 3px solid;
+    color: black;
+    border-radius: 100px;
+  }
 }
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700&subset=cyrillic");
