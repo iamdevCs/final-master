@@ -9,6 +9,7 @@ let btnMyList = select('#mylist');
 let btnAbout = select('#about');
 let btnJoin = select('#join');
 let btnSearch = select('#btn-search');
+let searchBar = select('#search-bar');
 // Audio handler
 let audio = select('audio');
 let currentSongIndex = 3;
@@ -184,6 +185,8 @@ btnMyList.onclick = function (event) {
 
 // When click on button search
 btnSearch.onclick = function () {
+    btnSearch.style.display = 'none';
+    searchBar.value = '';
     loadBlock(mainBlock, './block/song-info.html');
 }
 

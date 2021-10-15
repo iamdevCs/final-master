@@ -423,6 +423,7 @@ html {
   }
 
   #btn-search {
+    display: none;
     margin-top: 7px;
     border-radius: 5px;
     background-color: white;

@@ -37,3 +37,19 @@ Validate.isEmail = function (target) {
         }
     }
 }
+
+function searchRequire(searchBar, btnSearch) {
+    let getSearchBar = select(searchBar);
+    let getBtnSearch = select(btnSearch);
+    getSearchBar.onblur = function () {
+        console.log(getBtnSearch.value);
+        if (getSearchBar.value == '') {
+            getBtnSearch.style.display = 'none';
+        } else {
+            getBtnSearch.style.display = 'block';
+        }
+    }
+    getSearchBar.oninput = function () {
+        getBtnSearch.style.display = 'block';
+    }
+}
