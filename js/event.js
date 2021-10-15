@@ -73,6 +73,27 @@ btnHome.onclick = function (event) {
 // List default music
 const song = [
     {
+        title: 'Thanh xuân',
+        author: 'da Lab',
+        image: '',
+        // background: '/img/hlm-background.jpg',
+        song: './audio/tx.mp3',
+    },
+    {
+        title: 'Thức giấc',
+        author: 'da Lab',
+        image: '',
+        // background: '/img/hlm-background.jpg',
+        song: './audio/tg.mp3',
+    },
+    {
+        title: 'Vùng ký ức',
+        author: 'Chillies',
+        image: '',
+        // background: '/img/hlm-background.jpg',
+        song: './audio/vku.mp3',
+    },
+    {
         title: 'Túy âm',
         author: 'Xesi',
         image: './img/tuyam.jpg',
@@ -183,6 +204,16 @@ function getSection(index) {
     scrollSelectedSection(index);
 }
 
+function resetSection(indexPoi) {
+    sectionPoint[indexPoi].classList.add('isActive');
+    for(let i = 0; i < 4; i++) {
+        if (i == indexPoi) {
+            continue;
+        }
+        sectionPoint[i].classList.remove('isActive');
+    }
+}
+
 // Scroll selected section into view
 function scrollSelectedSection(index) {
     const section = select(`[data-section="${index}"]`);
@@ -194,6 +225,24 @@ function scrollSelectedSection(index) {
             }
         );
 }
+
+// If a section is on view, reset section index
+bodyBlock.onscroll = function () {
+    // console.log(bodyBlock.scrollTop);
+    let currentPoi = bodyBlock.scrollTop;
+    if (0 <= currentPoi && currentPoi <= 688) {
+        resetSection(0);
+    } else if (689 <= currentPoi && currentPoi <= 1376) {
+        resetSection(1);
+    } else if (1377 <= currentPoi && currentPoi <= 2070) {
+        resetSection(2);
+    } else if (2070 <= currentPoi) {
+        resetSection(3);
+    }
+}
+// 688
+// 1376
+// 2070
 
 /** Player button event
  * =================================================================
@@ -336,3 +385,10 @@ btnVolume.onclick = function () {
 currentVolume.onchange = function () {
     audio.volume = currentVolume.value/100;
 }
+
+/**
+ * ============================================================
+ * ============================================================
+ * TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST 
+ * TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST 
+ */
