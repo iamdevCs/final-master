@@ -2,11 +2,13 @@
 const select = document.querySelector.bind(document);
 const selectAll = document.querySelectorAll.bind(document);
 let bodyBlock = select('.body-block');
+let mainBlock = '.body-block';
 // Navbar handler
 let btnHome = select('#home');
 let btnMyList = select('#mylist');
 let btnAbout = select('#about');
 let btnJoin = select('#join');
+let btnSearch = select('#btn-search');
 // Audio handler
 let audio = select('audio');
 let currentSongIndex = 3;
@@ -37,6 +39,16 @@ let scriptValidate = `<script>
             ]
         });
     </script>`;
+// Load a block
+function loadBlock(mainBlock, blockName) {
+    $(mainBlock).fadeOut('slow', function () {
+        bodyBlock.innerText = '';
+        bodyBlock.style.display = 'block';
+        $(mainBlock).load(blockName, function () {
+            $(mainBlock).fadeIn(1000);
+        });
+    })
+}
 
 /** Navbar event
  * =================================================================
@@ -44,13 +56,7 @@ let scriptValidate = `<script>
 // When click on join
 btnJoin.onclick = function (event) {
     event.preventDefault();
-    $('.body-block').fadeOut('slow', function () {
-        bodyBlock.innerText = '';
-        bodyBlock.style.display = 'block';
-        $('.body-block').load('./block/sign-in.html', function () {
-            $('.body-block').fadeIn(1000);
-        });
-    })
+    loadBlock('.body-block', './block/sign-in.html');
     setTimeout(() => {
         $('body.main').append(scriptValidate);
         // scriptValidate = ``;
@@ -60,13 +66,7 @@ btnJoin.onclick = function (event) {
 // When click on home
 btnHome.onclick = function (event) {
     event.preventDefault();
-    $('.body-block').fadeOut('slow', function () {
-        bodyBlock.style.display = 'block';
-        bodyBlock.innerText = '';
-        $('.body-block').load('./block/home.html', function () {
-            $('.body-block').fadeIn(3000);
-        });
-    })
+    loadBlock(mainBlock, './block/home.html');
 }
 
 // When click on My List - load list default music
@@ -174,18 +174,17 @@ html = song.map(function (element, index) {
 // Handle event click
 btnMyList.onclick = function (event) {
     event.preventDefault();
-    $('.body-block').fadeOut('slow', function () {
-        bodyBlock.style.display = 'block';
-        bodyBlock.innerText = '';
-        $('.body-block').load('./block/favourite-list.html', function () {
-            $('.body-block').fadeIn(3000);
-        });
-    })
+    loadBlock(mainBlock, './block/favourite-list.html');
     // Load list song
     // setTimeout(() => {
     //     let listSong = select('.list-song');
     //     listSong.innerHTML = html.join('');
     // }, 1000);
+}
+
+// When click on button search
+btnSearch.onclick = function () {
+    loadBlock(mainBlock, './block/song-info.html');
 }
 
 /** Scroll section event

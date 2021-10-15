@@ -1,0 +1,141 @@
+/* Mobile */
+@media screen and (max-width: 46.1875em) {
+}
+/* Table */
+@media screen and (min-width: 46.1876em) and (max-width: 63.9375em) {
+}
+/* PC */
+@media screen and (min-width: 64em) {
+  .searching-form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    font-family: cursive;
+  }
+
+  .search-result {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* background-color: black; */
+    width: 60%;
+    height: 80%;
+  }
+
+  .search-result-image {
+    min-width: 650px;
+    width: 60%;
+    height: 100%;
+    /* border-right: 1px solid white; */
+    justify-content: center;
+  }
+
+  #search-result-image {
+    border-radius: 10px;
+    width: 80%;
+  }
+
+  .about-song {
+    min-width: 400px;
+    padding-top: 5%;
+    width: 40%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-family: cursive;
+  }
+
+  /* 80 * 36 */
+  .btn-deal-option {
+    font-family: cursive;
+    min-width: 80px;
+    min-height: 36px;
+    width: 100px;
+    background-image: linear-gradient(45deg, grey 0%, white 100%);
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  #btn-buy {
+    min-width: 80px;
+    min-height: 36px;
+    width: 100px;
+    background-image: linear-gradient(45deg, #2f80ed 0%, #00aeef 100%);
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  .btn-deal-option:hover {
+    animation-name: colorEffect;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    opacity: 60%;
+  }
+
+  @keyframes colorEffect {
+    0% {
+      border: 1px solid white;
+    }
+    10% {
+      border: 1px solid black;
+    }
+    20% {
+      border: 1px solid white;
+    }
+    30% {
+      border: 1px solid black;
+    }
+    40% {
+      border: 1px solid white;
+    }
+    50% {
+      border: 1px solid black;
+    }
+    60% {
+      border: 1px solid white;
+    }
+    70% {
+      border: 1px solid black;
+    }
+    80% {
+      border: 1px solid white;
+    }
+    90% {
+      border: 1px solid black;
+    }
+    100% {
+      border: 1px solid white;
+    }
+  }
+
+  #related-label {
+    color: white;
+  }
+
+  .related-to-author {
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    height: 30%;
+    background-color: green;
+  }
+
+  .related {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+  }
+
+  .top-music {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* background-color: blue; */
+    width: 20%;
+    height: 80%;
+    /* border-left: 1px solid white; */
+  }
+}
