@@ -6,7 +6,7 @@ let mainBlock = '.body-block';
 // Navbar handler
 let btnHome = select('#home');
 let btnMyList = select('#mylist');
-let btnAbout = select('#about');
+let btnOption = select('#option');
 let btnJoin = select('#join');
 let btnSearch = select('#btn-search');
 let searchBar = select('#search-bar');

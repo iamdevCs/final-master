@@ -115,19 +115,70 @@
     color: white;
   }
 
-  .related-to-author {
-    display: flex;
-    margin-top: 30px;
+  .grid-related {
     width: 100%;
-    height: 30%;
-    background-color: green;
+    height: 150px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196f3; */
+    padding: 10px;
   }
 
-  .related {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
+  .grid-related-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
   }
+
+  #gr1 {
+    background-image: url("../img/31073.jpg");
+    background-size: cover;
+  }
+
+  #gr1:hover {
+    animation: flip;
+    animation-duration: 1s;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+  }
+
+  #gr2 {
+    background-image: url("../img/31073.jpg");
+    background-size: cover;
+  }
+
+  #gr2:hover {
+    animation: flip;
+    animation-duration: 1s;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+  }
+
+  #gr3 {
+    background-image: url("../img/31073.jpg");
+    background-size: cover;
+  }
+
+  #gr3:hover {
+    animation: flip;
+    animation-duration: 1s;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+  }
+
+  /* @keyframes flip {
+    from {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+  } */
 
   .top-music {
     display: block;

@@ -303,3 +303,15 @@
 .add-element {
   display: none;
 }
+
+#link-wish-list {
+  font-size: 20px;
+  font-family: cursive;
+  text-decoration: none;
+  color: white;
+}
+
+#link-wish-list:hover {
+  font-size: 22px;
+  color: lightgreen;
+}

@@ -2,6 +2,7 @@ let listName = select('#fav-list-name');
 let btnManage = select('#btn-manage-list');
 let iconFavDel = selectAll('.fav-icon-del');
 let addElement = select('.add-element');
+let linkWishList = select('#link-wish-list');
 
 // When click on a list
 listName.onclick = function (event) {
@@ -42,4 +43,10 @@ btnManage.onclick = function () {
         })
     } else {
     }
+}
+
+// When click on go wish list
+linkWishList.onclick = function (event) {
+    event.preventDefault();
+    loadBlock(mainBlock, './block/wish-list.html');
 }
