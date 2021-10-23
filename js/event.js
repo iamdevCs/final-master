@@ -57,6 +57,9 @@ function loadBlock(mainBlock, blockName) {
 // When click on join
 btnJoin.onclick = function (event) {
     event.preventDefault();
+    setTimeout(() => {
+        searchBar.style.display = 'block';
+    }, 600);
     loadBlock('.body-block', './block/sign-in.html');
     setTimeout(() => {
         $('body.main').append(scriptValidate);
@@ -67,7 +70,17 @@ btnJoin.onclick = function (event) {
 // When click on home
 btnHome.onclick = function (event) {
     event.preventDefault();
+    setTimeout(() => {
+        searchBar.style.display = 'block';
+    }, 600);
     loadBlock(mainBlock, './block/home.html');
+}
+
+// When click on option
+btnOption.onclick = function (event) {
+    event.preventDefault();
+    searchBar.style.display = 'none';
+    loadBlock(mainBlock, './block/option.html');
 }
 
 // When click on My List - load list default music
@@ -175,6 +188,9 @@ html = song.map(function (element, index) {
 // Handle event click
 btnMyList.onclick = function (event) {
     event.preventDefault();
+    setTimeout(() => {
+        searchBar.style.display = 'block';
+    }, 600);
     loadBlock(mainBlock, './block/favourite-list.html');
     // Load list song
     // setTimeout(() => {
